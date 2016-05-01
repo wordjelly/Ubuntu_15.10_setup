@@ -29,6 +29,10 @@ then source from /etc/environment
 source /etc/environment
 ```
 
+
+
+
+
 # SUBLIME
 
 __REPOSITORY__
@@ -38,13 +42,22 @@ sudo apt-get update
 sudo apt-get install sublime-text-installer
 ```
 
+
+
+
+
+
 # RUBY
 ```
 sudo apt-get install ruby-full
+gem install bundler
 ```
 
-# APACHE TOMCAT
 
+
+
+
+# APACHE TOMCAT
 
 ```
 cd $HOME/Downloads
@@ -65,6 +78,10 @@ cd /opt/tomcat/apache-tomcat-whatever/bin/startup.sh
 it should say tomcat started
 go to browser and check if 
 localhost:8080 produces tomcat working page.
+
+
+
+
 
 # REDIS
 
