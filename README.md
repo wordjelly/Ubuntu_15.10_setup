@@ -121,26 +121,29 @@ sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 # MONGODB
 
+Mongodb does not play well with the Ubuntu 15.xx versions.
+Its very irritating to install it.
+
+Go to -> Ubuntu software center -> search for mongodb -> install it.
+
+
 ---
 
 # Eclipse
 
-##Download Mars1
-------
+###Download Mars1
 [Link](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/mars1)
 
 
 
-##Install
-------
+###Install
 
 
 Double click the archive -> extract it -> open it -> lock to launcher to automatically build the shortcut
 
 
 
-##Basic
-------
+###Basic
 
 
 Import existing projects as General projects - not maven.
@@ -149,10 +152,8 @@ To fix it go to __build path -> Libraries -> Add Library__
 The __oracle-java-8__ defined above should already be checked
 __Click Finish -> Apply__
 
-## Setting up Tomcat + Eclipse
------
 
-
+### Setting up Tomcat + Eclipse
 Servers Tab -> New Server -> Apache Tomcat - 7 -> choose /opt/tomcat/apache-tomcat-7 -> finish
 
 
