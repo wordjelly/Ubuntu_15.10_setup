@@ -121,10 +121,65 @@ sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 # MONGODB
 [blog - guide](https://rohan-paul.github.io/mongodb_in_ubuntu/2015/09/03/How_to_Install_MongoDB_Iin_Ubuntu-15.04.html)
-Mongodb does not play well with the Ubuntu 15.xx versions.
-Its very irritating to install it.
 
-Go to -> Ubuntu software center -> search for mongodb -> install it.
+======
+
+Step-A
+
+From Ubuntu’s official package page install the mongodb version 2.6.10 (at this point, this is the latest MongoDB version for which Ubuntu 15.10 (wily) has an official Mongodb package) through Software Center.
+
+Post installation, check the version number with mongod --version
+
+Step-B
+
+Create a systemd startup file in - /lib/systemd/system/mongodb.service with the following content -
+
+```
+[Unit]
+Description=High-performance, schema-free document-oriented database
+Documentation=man:mongod(1)
+After=network.target
+
+[Service]
+Type=forking
+User=mongodb
+Group=mongodb
+RuntimeDirectory=mongod
+PIDFile=/var/run/mongod/mongod.pid
+ExecStart=/usr/bin/mongod -f /etc/mongod.conf --pidfilepath /var/run/mongod/mongod.pid --fork
+TimeoutStopSec=5
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target
+```
+
+
+Now enable this mongodb.service file and start it with the following command
+
+sudo systemctl enable mongodb.service
+
+Step-C
+
+Create a folder /data/db in your machine; i.e. run sudo mkdir -p /data/db
+
+And then take ownership of the /data/db directory by running - sudo chown -R mongodb /data/db
+
+Now open the mongodb configuration file with sudo gedit /etc/mongod.conf and change the “dbpath” line as below
+
+Replace dbpath: /var/lib/mongodb TO dbpath: /data/db and then save the file.
+
+Step-D
+
+Now running sudo service mongodb start should start mongodb normally.
+
+To check if mongodb started by open the log file at /var/log/mongodb/mongodb.log. The log file’s last line should show something like :-
+
+“[initandlisten] waiting for connections on port 27017”
+
+
+
+======
 
 
 ---
