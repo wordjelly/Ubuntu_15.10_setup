@@ -3,6 +3,10 @@ Setup Instructions to load java, ruby, rails, redis, mongo, node, tomcat and ecl
 
 # JAVA-8
 
+
+[webupd8-team](http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html)
+
+
 __REPOSITORY__
 ```
 sudo add-apt-repository ppa:webupd8team/java
@@ -36,6 +40,10 @@ source /etc/environment
 
 # SUBLIME
 
+
+[webupd8-team](http://www.webupd8.org/2013/07/sublime-text-3-ubuntu-ppa-now-available.html)
+
+
 __REPOSITORY__
 ```
 sudo add-apt-repository ppa:webupd8team/java
@@ -46,6 +54,9 @@ sudo apt-get install sublime-text-installer
 ---
 
 # RUBY
+
+[official ruby-lang page](https://www.ruby-lang.org/en/documentation/installation/)
+
 ```
 sudo apt-get install ruby-full
 gem install bundler
@@ -55,6 +66,8 @@ gem install bundler
 
 
 # APACHE TOMCAT
+
+[Liquid-Web](http://www.liquidweb.com/kb/how-to-install-apache-tomcat-7-on-ubuntu-14-04/)
 
 ```
 cd $HOME/Downloads
@@ -81,6 +94,10 @@ localhost:8080 produces tomcat working page.
 
 # REDIS
 
+
+[DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-configure-a-redis-cluster-on-ubuntu-14-04)
+
+
 ```
 sudo add-apt-repository ppa:chris-lea/redis-server
 sudo apt-get update
@@ -90,8 +107,58 @@ sudo apt-get install redis-server
 
 # NODE-JS
 
+
+[How to Install Node.js on Ubuntu 14.04](http://www.hostingadvice.com/how-to/install-nodejs-ubuntu-14-04/#ubuntu-package-manager)
+
+
 ```
 sudo apt-get install nodejs
 sudo apt-get install npm
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 ```
+
+---
+
+# MONGODB
+
+---
+
+# Eclipse
+
+##Download Mars1
+------
+[Link](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/mars1)
+
+
+
+##Install
+------
+
+
+Double click the archive -> extract it -> open it -> lock to launcher to automatically build the shortcut
+
+
+
+##Basic
+------
+
+
+Import existing projects as General projects - not maven.
+build path may reference an older jre - this will throw a build path error.
+To fix it go to __build path -> Libraries -> Add Library__ 
+The __oracle-java-8__ defined above should already be checked
+__Click Finish -> Apply__
+
+## Setting up Tomcat + Eclipse
+-----
+
+
+Servers Tab -> New Server -> Apache Tomcat - 7 -> choose /opt/tomcat/apache-tomcat-7 -> finish
+
+
+---
+
+
+
+
+
