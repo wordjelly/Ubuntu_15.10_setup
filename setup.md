@@ -28,11 +28,7 @@ then source from /etc/environment
 ```
 source /etc/environment
 ```
-
-
-
-
-
+<br><br><br><br><br>br><br><br><br><br>
 # SUBLIME
 
 __REPOSITORY__
@@ -46,7 +42,7 @@ sudo apt-get install sublime-text-installer
 
 
 
-
+<br><br><br><br><br>br><br><br><br><br>
 # RUBY
 ```
 sudo apt-get install ruby-full
@@ -56,7 +52,7 @@ gem install bundler
 
 
 
-
+<br><br><br><br><br>br><br><br><br><br>
 # APACHE TOMCAT
 
 ```
@@ -82,7 +78,7 @@ localhost:8080 produces tomcat working page.
 
 
 
-
+<br><br><br><br><br>br><br><br><br>
 # REDIS
 
 ```
@@ -91,4 +87,11 @@ sudo apt-get update
 sudo apt-get install redis-server
 ```
 
+<br><br><br><br><br><br><br><br><br>
+# NODE-JS
 
+```
+sudo apt-get install nodejs
+sudo apt-get install npm
+sudo ln -s /usr/bin/nodejs /usr/bin/node
+```
