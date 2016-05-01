@@ -120,7 +120,7 @@ sudo ln -s /usr/bin/nodejs /usr/bin/node
 ---
 
 # MONGODB
-
+[blog - guide](https://rohan-paul.github.io/mongodb_in_ubuntu/2015/09/03/How_to_Install_MongoDB_Iin_Ubuntu-15.04.html)
 Mongodb does not play well with the Ubuntu 15.xx versions.
 Its very irritating to install it.
 
